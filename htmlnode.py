@@ -8,16 +8,13 @@ class HTMLNode:
     def to_html(self):
         raise NotImplementedError
     
-    def props_to_html(self):ß
+    def props_to_html(self):
         s = ""
-        for key, value in self.props.items():Í
-            s = s + key + "\"" + value + "\" "
+        if self.props == None:
+            return f"No props"
+        for key, value in self.props.items():
+            s = s + key + "=" +"\"" + value + "\" "
         return s
-
 
     def __repr__(self):
          return f"HTMLNode({self.tag}, {self.value}, {self.children}, {self.props})"
-
-class LeafNode(HTMLNode):
-    def __init__(self):
-        super().__init__()

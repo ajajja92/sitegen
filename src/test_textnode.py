@@ -1,5 +1,4 @@
 import unittest
-
 from textnode import TextNode
 
 
@@ -31,7 +30,6 @@ class TestTextNode(unittest.TestCase):
     def test_url_none(self):
         node = TextNode("This is a text node", "bold")
         self.assertIsNone(node.url, msg=None)
-
 
 if __name__ == "__main__":
     unittest.main()
